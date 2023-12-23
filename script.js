@@ -11,3 +11,12 @@ window.addEventListener("scroll", function () {
   }
   prevScrollPos = currentScrollPos;
 });
+
+/*=== API ===*/
+async function getData() {
+  let response = await fetch("https://suitmedia-backend.suitdev.com/api/ideas");
+  let data = await response.json();
+  console.log(data);
+}
+
+getData();
